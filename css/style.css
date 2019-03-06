@@ -1,0 +1,287 @@
+/* Default DevCorner Style Setting */
+
+:root{
+  --dc-: #28a745;
+  --gr-: #515151;
+  --wh-: #fefefe;
+  --shadow-: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+  --ts-: 2px 5px 2px rgba(33,33,33,0.25);
+}
+
+.fa-code{
+  color: var(--dc-);
+}
+
+button::-webkit-focus-inner{
+  border: 0;
+}
+button::-moz-focus-inner{
+  border: 0;
+}
+button::-o-focus-inner{
+  border: 0;
+}
+button::-ms-focus-inner{
+  border: 0;
+}
+
+.center{
+  width: 40%;
+  text-align: center;
+  top: 70%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  font-weight: 400;
+  font-family: Roboto;
+  color: var(--gr-);
+  font-size: 1.5rem;
+  background: rgba(255,255,255,0.6);
+  padding: 1em 0 2em;
+  border-radius: 1em;
+}
+
+.title{
+  font-size: 1em;
+}
+
+.info{
+  color: var(--dc-);
+}
+
+.brand{
+  margin: 0;
+  padding: 0.5em;
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--gr-);
+  font-family: Roboto;
+  z-index: 0;
+  font-size: 3em;
+  text-shadow: var(--ts-);
+}
+
+.slogan{
+  margin: 0;
+  padding: 0.5em;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--gr-);
+  font-family: Roboto;
+  font-size: 1.2em;
+  text-shadow: var(--ts-);
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  background: url(../img/img_05.jpeg) no-repeat 50% 50%;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.notifier-container {
+  z-index: 999;
+  position: fixed;
+  top: 4px;
+  right: 4px;
+  padding: 4px;
+  width: 350px;
+  max-width: 98%;
+  font-family: "Segoe UI", "Tahoma", "Calibri", "Verdana", sans-serif;
+  color: #999;
+
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.notifier-container * {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.notifier {
+  position: relative;
+  width: 100%;
+  min-height: 62px;
+  margin-bottom: 12px;
+  padding: 8px;
+  background: white;
+  border-left: 4px solid #95a5a6;
+  border-radius: 1px;
+  box-shadow: 0 1px 10px 0 rgba(0,0,0,.1), 0 2px 15px 0 rgba(0,0,0,.05);
+
+  opacity: 0;
+  -webkit-transform: translateX(100%);
+  -moz-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  transform: translateX(100%);
+
+  -webkit-transition: all .6s cubic-bezier(0.5, -0.5, 0.3, 1.4),
+  opacity .6s ease;
+  -moz-transition: all .6s cubic-bezier(0.5, -0.5, 0.3, 1.4),
+  opacity .6s ease;
+  -ms-transition: all .6s cubic-bezier(0.5, -0.5, 0.3, 1.4),
+  opacity .6s ease;
+  transition: all .6s cubic-bezier(0.5, -0.5, 0.3, 1.4),
+  opacity .6s ease;
+}
+.notifier.shown {
+  opacity: 1;
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  transform: translateX(0);
+}
+.notifier.shown:hover {
+  opacity: 1;
+}
+.notifier-close {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  width: 16px;
+  height: 16px;
+  padding: 0;
+  text-align: center;
+  text-decoration: none;
+  color: #aaa;
+  font-weight: bold;
+  font-size: 16px;
+  background: transparent;
+  outline: none;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  opacity: .5;
+  -webkit-transition: .3s ease;
+  -moz-transition: .3s ease;
+  -ms-transition: .3s ease;
+  transition: .3s ease;
+}
+.notifier-close:hover,
+.notifier-close:focus {
+  opacity: 1;
+  color: #999;
+  background: #eee;
+}
+.notifier-img {
+  float: left;
+  margin: 8px 10px auto 0;
+  vertical-align: middle;
+}
+.img {
+  width: 32px;
+  height: 32px;
+}
+.notifier-title {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 4px;
+  font-size: 18px;
+  font-weight: normal;
+  color: #95a5a6;
+}
+.notifier-body {
+  font-size: 13px;
+  color: #95a5a6;
+}
+.notifier.info {
+  border-left-color: #3498db;
+}
+.notifier.success {
+  border-left-color: #1abc9c;
+}
+.notifier.warning {
+  border-left-color: #f1c40f;
+}
+.notifier.danger {
+  border-left-color: #e74c3c;
+}
+
+/* Button settings */
+.btn-group button{
+  width: 90px;
+  height: 30px;
+  color: var(--gr-);
+  font-size: 15px !important;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-weight: 400;
+  background: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.btn-group button:nth-child(1){
+  color: var(--wh-);
+  background: #95a5a6;
+}
+.btn-group button:nth-child(1):hover{
+  color: #95a5a6;
+  background: var(--wh-);
+}
+
+.btn-group button:nth-child(2){
+  color: var(--wh-);
+  background: #3498db;
+}
+.btn-group button:nth-child(2):hover{
+  color: #3498db;
+  background: var(--wh-);
+}
+
+.btn-group button:nth-child(3){
+  color: var(--wh-);
+  background: #1abc9c;
+}
+.btn-group button:nth-child(3):hover{
+  color: #1abc9c;
+  background: var(--wh-);
+}
+
+.btn-group button:nth-child(4){
+  color: var(--wh-);
+  background: #f1c40f;
+}
+.btn-group button:nth-child(4):hover{
+  color: #f1c40f;
+  background: var(--wh-);
+}
+
+.btn-group button:nth-child(5){
+  color: var(--wh-);
+  background: #e74c3c;
+}
+.btn-group button:nth-child(5):hover{
+  color: #e74c3c;
+  background: var(--wh-);
+}
+
+/* Notifications icon settings */
+#notifier-1 img{
+  color: red;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* End */
